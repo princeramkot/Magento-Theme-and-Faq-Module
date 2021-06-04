@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widgets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../Magento/Widget/etc/widget.xsd">
+    <widget id="catgory_grid" class="Vt\Aurora\Block\Widget\ShowCategoryGrid">
+        <label translate="true">Aurora Category Grid</label>
+        <description>To show category grid on any page with images. *NOTE If all fields are empty, nothing will be render</description>
+
+        <parameters>
+            <parameter name="category_id1" xsi:type="text" required="false" visible="true">
+                <label translate="true">Enter Category Id 1</label>
+            </parameter>
+            <parameter name="category_id2" xsi:type="text" required="false" visible="true">
+                <label translate="true">Enter Category Id 2</label>
+            </parameter>
+            <parameter name="category_id3" xsi:type="text" required="false" visible="true">
+                <label translate="true">Enter Category Id 3</label>
+            </parameter>
+            <parameter name="category_id4" xsi:type="text" required="false" visible="true">
+                <label translate="true">Enter Category Id 4</label>
+            </parameter>           
+        </parameters>
+
+       
+            
+               
+     
+        
+       
+    </widget>
+
+
+    <!-- <widget id="banner" class="Vt\Aurora\Block\Widget\Banner">
+         <label translate="true">Aurora Banner</label>
+      <description>To Show Banner</description>
+
+    <parameters>
+    <parameter name="banner_image" xsi:type="text" required="false" visible="true">
+                <label translate="true">Enter Image Name At Path /web/images/</label>  
+            </parameter>
+    </parameters>
+
+
+    </widget> -->
+
+
+
+    <widget id="aurora_review" class="Vt\Aurora\Block\Widget\Review">
+        <label translate="true">Aurora Reviews</label>
+        <description>To Show Customer Reviews</description>
+
+        <parameters>
+            <parameter name="customer_name1" xsi:type="text" required="false" visible="true">
+                <label translate="true">Enter Customer 1 Name</label>
+            </parameter>
+            <parameter name="customer_feedback1" xsi:type="text" required="false" visible="true">
+                <label translate="true">Enter Customer 1 Feedback</label>
+            </parameter>
+            <parameter name="customer_Image1" xsi:type="text" required="false" visible="true">
+                <label translate="true">Enter Name of Customer 1 Image</label>
+            </parameter>
+            <parameter name="customer_name2" xsi:type="text" required="false" visible="true">
+                <label translate="true">Enter Customer 2 Name</label>
+            </parameter>
+            <parameter name="customer_feedback2" xsi:type="text" required="false" visible="true">
+                <label translate="true">Enter Customer 2 Feedback</label>
+            </parameter>
+            <parameter name="customer_Image2" xsi:type="text" required="false" visible="true">
+                <label translate="true">Enter Name of Customer 2 Image</label>
+            </parameter>
+        </parameters>
+
+    </widget>
+    <widget id="aurora_newslatter" class="Vt\Aurora\Block\Widget\Newslatter">
+        <label translate="true">Aurora Newslatter</label>
+        <description>To Show Newslatter</description>
+    </widget>
+</widgets>

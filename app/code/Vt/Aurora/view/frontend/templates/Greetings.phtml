@@ -1,0 +1,16 @@
+<?php
+
+$viewModel=$block->getViewModel();
+
+echo $viewModel->getHelloMessage();
+
+
+$categories=$viewModel->getCategoryCollection();
+ foreach ($categories as $category)
+ {
+    
+        //echo $category->getId()." ";
+        echo $this->getData('category_id1');
+    
+}
+?>

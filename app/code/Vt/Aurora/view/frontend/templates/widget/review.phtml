@@ -1,0 +1,55 @@
+<div class="parent_review">
+    <div class="review-title">What Our Customer Say</div>
+    
+        <div class="owl-carouseltwo owl-theme">
+
+            <?php if ($this->getData("customer_name1")) : ?>
+                <div class="review">
+                    
+                        <div class="customer-image1 customerimg"> </div>
+                        <div><span translate="true"><?= $this->getData("customer_feedback1") ?></span></div>
+                        <div class="customer-name"><?= $this->getData("customer_name1") ?></div>
+                    
+                </div>
+            <?php endif; ?>
+
+            <?php if ($this->getData("customer_name2")) : ?>
+                <div class="review">
+                 
+                        <div class="customer-image2 customerimg"> </div>
+                        <span translate="true"><?= $this->getData("customer_feedback2") ?></span>
+                        <div class="customer-name"><?= $this->getData("customer_name2") ?></div>
+                    
+                </div> 
+        </div>
+    
+</div>
+<?php endif; ?>
+
+<script type="text/javascript" xml="space">
+    require([
+        'jquery',
+        'owlcarousel'
+    ], function($) {
+        $(document).ready(function() {
+            $('.owl-carouseltwo').owlCarousel({
+                loop: true,
+                nav: false,
+                items: 1,
+                stagePadding: 0,
+                dots: false,
+                autoplay: true,
+                autoplayTimeout: 3000,
+                // autoplayHoverPause: true,
+                // animateIn: 'fadeIn',
+                // animateOut: 'fadeOut'
+                //rtl:true
+            })
+
+
+        });
+
+
+
+    });
+</script>

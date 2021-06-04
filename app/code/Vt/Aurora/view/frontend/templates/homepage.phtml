@@ -1,0 +1,37 @@
+<?php
+
+/** @var \Vt\Aurora\Block\Template $block */
+
+echo $this->getLayout()
+    ->createBlock('Magento\Cms\Block\Block')
+    ->setBlockId('vtnslider')
+    ->toHtml();
+
+?>
+<script type="text/javascript" xml="space">
+    require([
+        'jquery',
+        'owlcarousel'
+    ], function($) {
+        $(document).ready(function() {
+            $('.owl-carousel ').owlCarousel({
+                loop: true,
+                nav: true,
+                items: 1,
+                stagePadding: 0,
+                dots: true,
+                autoplay: true,
+                autoplayTimeout: 3000,
+                // autoplayHoverPause: true,
+                animateIn: 'fadeIn',
+                animateOut: 'fadeOut'
+                //rtl:true
+            })
+
+
+        });
+
+
+
+    });
+</script>

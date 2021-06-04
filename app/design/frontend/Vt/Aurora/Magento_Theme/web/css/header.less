@@ -1,0 +1,126 @@
+@footer-links-color: white;
+@primary: #ec3657;
+@link-color: #ec3657;
+@secondry: #de7282;
+@short-button: black;
+
+
+.page-header {
+    background: white;
+
+    .panel.wrapper {
+        background-color: @secondry;
+
+        a {
+            color: white !important;
+        }
+
+
+    }
+}
+
+.header .content {
+    max-width: 100%;
+}
+
+div#store\.menu {
+    background: black;
+}
+
+
+
+.navigation .level0.active>.level-top,
+.navigation .level0.has-active>.level-top {
+    //color of category name when it is clicked
+    color: @secondry  !important;
+}
+
+
+//navigation bar
+.navigation {
+
+    .level0>.level-top {
+        color: white !important;
+
+        &:hover {
+            color: white !important;
+            background: #fe3956;
+        }
+
+
+    }
+
+    .level0 {
+
+        &.submenu {
+            background: black;
+
+            &:hover {
+                background: #fe3956 !important;
+                color: white !important;
+            }
+
+            a {
+                color: white !important;
+            }
+        }
+
+        &.active {
+            color: white;
+        }
+    }
+
+    ul {
+        background: black !important;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+
+
+
+
+
+
+
+.minicart-wrapper .action.showcart {
+    &:before {
+        color: black;
+    }
+
+    &.active:hover:before {
+        color: @primary;
+    }
+
+}
+
+
+@media (min-width: 768px) {
+
+
+
+    .block-search {
+        margin-top: 30px !important;
+        width: 600px !important;
+        margin-right: 30% !important;
+
+
+    }
+
+
+    .minicart-wrapper {
+        right: 126px;
+        margin-top: 30px !important;
+        margin-left: 800px !important;
+        position: absolute !important;
+    }
+
+    .block-search input {
+        border-radius: 20px;
+        border: 2px solid #fe3956;
+    }
+
+
+
+}

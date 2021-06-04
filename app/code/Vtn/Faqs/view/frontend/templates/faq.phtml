@@ -1,0 +1,17 @@
+
+<?php
+$collection = $block->getCollection(); //gets the collection based on faq_id and stores it in a variable
+
+foreach ($collection as $row) { //now using loop accessing this data in accordion widget
+?>
+    <div class="faq" id="element" data-mage-init='{"accordion":{"openedState": "active", "collapsible": true, "active": true, "multipleCollapsible": true}}'>
+        <div data-role="collapsible">
+            <div class="title" data-role="trigger">
+                <?php echo $row['title'];  ?>
+            </div>
+        </div>
+        <div class="prince" data-role="content"><p><?php echo $row['description'];  ?></p></div>
+    </div>
+<?php
+}
+?>

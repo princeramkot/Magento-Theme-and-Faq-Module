@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="arora_category_grid" resource="default" engine="innodb" comment="for showing categories image grid">
+        <column xsi:type="int" name="category_id" padding="11" unsigned="false" nullable="false" identity="true" comment=""/>
+        <column xsi:type="varchar" name="category_name" comment=""/>
+        <column xsi:type="varchar" name="category_image" comment=""/>
+        <column xsi:type="varchar" name="category_path" comment=""/>
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="category_id"/>
+        </constraint>
+    </table>
+
+    <table name="aurora_banner" resource="default" engine="innodb" comment="for showing banner image ">
+        <column xsi:type="int" name="img_id" padding="11" unsigned="false" nullable="false" identity="true" comment=""/>
+        <column length="255" name="image" nullable="false" xsi:type="varchar"/>
+        <column length="255" name="button_url" nullable="true" xsi:type="varchar"/>
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="img_id"/>
+        </constraint>
+    </table>
+
+
+       <table name="employee_details" resource="default" engine="innodb" comment="demo_purpose " >
+        <column xsi:type="int" name="emp_id" padding="11" unsigned="false" nullable="false" identity="true" comment=""/>
+        <column length="255" name="emp_name" nullable="false" xsi:type="varchar"/>
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="emp_id"/>
+
+        </constraint>
+    
+
+    </table>
+
+
+    <table name="employee_salary" resource="default" engine="innodb" comment="demo_purpose " >
+     <column xsi:type="int" name="salary_id" padding="11" unsigned="false" nullable="false" identity="true" comment=""/>
+        <column xsi:type="int" name="emp_id" padding="11" unsigned="false" nullable="false"  comment=""/>
+        <column  name="emp_salary" nullable="false" xsi:type="int"/>
+     
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="salary_id"/>
+        </constraint>
+
+         <!-- <constraint  xsi:type="foreign" referenceId="FL_ALLOWED_SEVERITIES" table="employee_salary" 
+     column="emp_id" referenceTable="employee_details" referenceColumn="emp_id" onDelete="CASCADE"/> -->
+    </table>
+
+
+</schema>

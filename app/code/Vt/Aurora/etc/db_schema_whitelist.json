@@ -1,0 +1,43 @@
+{
+    "arora_category_grid": {
+        "column": {
+            "category_id": true,
+            "category_name": true,
+            "category_image": true,
+            "category_path": true
+        },
+        "constraint": {
+            "PRIMARY": true
+        }
+    },
+    "aurora_banner": {
+        "column": {
+            "img_id": true,
+            "image": true,
+            "button_url": true
+        },
+        "constraint": {
+            "PRIMARY": true
+        }
+    },
+    "employee_details": {
+        "column": {
+            "emp_id": true,
+            "emp_name": true
+        },
+        "constraint": {
+            "PRIMARY": true
+        }
+    },
+    "employee_salary": {
+        "column": {
+            "salary_id": true,
+            "emp_id": true,
+            "emp_salary": true
+        },
+        "constraint": {
+            "PRIMARY": true,
+            "EMPLOYEE_SALARY_EMP_ID_EMPLOYEE_DETAILS_EMP_ID": true
+        }
+    }
+}

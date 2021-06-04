@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <!-- virutal type allows inserting different dependencies into the existing classes but not making any change to other classes -->
+    <virtualType name="Vt\Aurora\Model\ResourceModel\Banner\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+
+        <arguments>
+            <!-- name of the table -->
+            <argument name="mainTable" xsi:type="string">aurora_banner</argument>
+            <!-- path to resourceModel -->
+            <argument name="resourceModel" xsi:type="string">Vt\Aurora\Model\ResourceModel\Banner</argument>
+        </arguments>
+    </virtualType>
+
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <!--make sure the name 'vtn_faqs_faq_listing_data_source' should be same as in file vtn_faqs_faq_listing.xml -->
+                <!-- the TYPE  creates instance of the collection, this is being used for grid  -->
+                <item name="banner_form_data_source" xsi:type="string">Vt\Aurora\Model\ResourceModel\Banner\Collection</item>
+            </argument>
+        </arguments>
+    </type>
+
+
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="aurora_banner_listing_data_source" xsi:type="string">Vt\Aurora\Model\ResourceModel\Banner\Collection</item>
+            </argument>
+        </arguments>
+    </type>
+
+    <virtualType name="Vt\Aurora\Model\ResourceModel\Banner\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">aurora_banner</argument>
+            <argument name="resourceModel" xsi:type="string">Vt\Aurora\Model\ResourceModel\Banner</argument>
+        </arguments>
+    </virtualType>
+
+
+
+
+    <virtualType name="VirtualTypeName" type="Magento\Catalog\Model\ImageUploader">
+        <arguments>
+            <argument name="baseTmpPath" xsi:type="string">logo/image</argument>
+            <argument name="basePath" xsi:type="string">logo/image</argument>
+            <argument name="allowedExtensions" xsi:type="array">
+                <item name="jpg" xsi:type="string">jpg</item>
+                <item name="jpeg" xsi:type="string">jpeg</item>
+                <item name="gif" xsi:type="string">gif</item>
+                <item name="png" xsi:type="string">png</item>
+            </argument>
+        </arguments>
+    </virtualType>
+    <type name="Vt\Aurora\Controller\Adminhtml\Banner\Uploader">
+        <arguments>
+            <argument name="imageUploader" xsi:type="object">VirtualTypeName</argument>
+        </arguments>
+    </type>
+
+</config>

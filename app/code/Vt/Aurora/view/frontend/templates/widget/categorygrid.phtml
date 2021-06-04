@@ -1,0 +1,32 @@
+<?php
+$imageUrls = [];     //a key value array to store category's image url as a key and it's path as a value
+$categories = $block->getCategoryCollection();
+
+?>
+<?php foreach ($categories as $category) : ?>
+
+  <?php if (
+    $category->getId() == $this->getData('category_id1')
+    || $category->getId() == $this->getData('category_id2')
+    || $category->getId() == $this->getData('category_id3')
+    || $category->getId() == $this->getData('category_id4')
+  ) : ?>
+    <?php $imageUrls[$category->getImageUrl()] = $category->getUrl(); ?>
+  <?php endif; ?>
+<?php endforeach; ?>
+<!-- //in case there is not even single category found, this div will not be rendered -->
+<?php if (count($imageUrls) != 0) : ?>
+  <div class="parentsquare">
+    <div class="auroraTitle"> <span translate="true"> CATEGORIES </span> </div>
+    <!-- iterating through found category images and it's path -->
+    <div class="category_grid">
+      <?php foreach ($imageUrls as $imageUrl => $path) : ?>
+        <a href="<?= $path; ?>">
+          <div class="square test-shine" style="background-image:url('<?= $imageUrl; ?>')"></div>
+        </a>
+      <?php endforeach; ?>
+    </div>
+
+  </div>
+
+<?php endif; ?>

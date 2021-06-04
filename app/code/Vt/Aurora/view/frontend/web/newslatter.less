@@ -1,0 +1,143 @@
+@images:"images/";
+.newslattercontainer{
+    height: 200px;
+    width: 100%;
+    background-color: #de7282;
+    margin-top: -50px;
+
+    & .single{
+        margin-top:32px;
+
+       & h2{
+            color:white;
+            font-weight: 400;
+            text-align: center;
+            font-family: 'Abril Fatface', cursive;
+        }
+
+        & .input-group {
+            display: flex;
+        }
+        
+        
+        
+    }
+}
+
+
+
+
+
+.newslatterbtn{
+    height: 32px;
+    width: 150px;
+    border: 1px;
+    background-color: black;
+    color: white;
+    margin-left: -90px;
+
+    &:hover {
+        background: #de7282;
+        color: white;
+    }
+    
+    
+}
+
+
+@media only screen and (max-width:480px){
+    .newslattercontainer {
+        height: 170px;
+        width:100%;
+
+        & .single {
+
+            & h2 {
+                right: 60px;
+                position: absolute;
+                
+                white-space: nowrap;
+              }
+
+              & .input-group {
+                position:absolute;
+                
+              }
+        }
+      }
+      
+      .newslatterbtn {
+        height: 32px;
+        width: 114px;
+         right: -406px; 
+        position: absolute;
+         top: 114px; 
+      }
+     
+      .input-group input {
+        right: -411px;
+        top: 110px;
+        width: 335px;
+        height: 40px;
+        position: absolute;
+      }
+    
+}
+@media only screen and(min-width:480px)
+{
+    .single h2{
+        font-weight: 400;
+        margin-top:13px;
+        margin-right: 14px;
+        &::before{
+            content: "";
+            display: block;
+            background:url("@{images}latter.png");
+            background-size:  100px 55px;
+            height: 55px;
+            position: absolute;
+            width: 100px;
+            margin-top: -13px;
+            margin-left: -115px;
+        }
+        
+    }
+
+       
+    
+
+    .newslattercontainer{
+        height: 98px; 
+        margin-top: -20px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .input-group input{
+        width: 500px;
+        height: 50px;
+    }
+
+    .newslattercontainer{
+        margin-top: 20px;
+    }
+    
+
+    .newslatterbtn{
+        height: 39px;
+        width: 150px;
+        border: 1px;
+        background-color: black;
+        color: white;
+       margin-top: -73px;
+    margin-left: 344px;
+        
+    }
+
+    .single {
+        display: flex;
+        justify-content: center;
+        position: relative;
+       
+    }
+}

@@ -1,0 +1,44 @@
+<?xml version="1.0" ?>
+<widgets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Widget:etc/widget.xsd">
+	<widget class="Vtn\Faqs\Block\Widget\Form" id="vtn_faqs_form">
+		<label>Faqs</label>
+		<description>Faqs</description>
+		<parameters>
+			<parameter name="heading1" sort_order="10" visible="true" xsi:type="text">
+				<label>Heading 1</label>
+			</parameter>
+
+            <parameter name="description1" sort_order="10" visible="true" xsi:type="text">
+				<label>Description 1</label>
+			</parameter>
+
+            <parameter name="heading2" sort_order="10" visible="true" xsi:type="text">
+				<label>Heading 2</label>
+			</parameter>
+
+            <parameter name="description2" sort_order="10" visible="true" xsi:type="text">
+				<label>Description 2</label>
+			</parameter>
+
+			 <parameter name="heading3" sort_order="10" visible="true" xsi:type="text">
+				<label>Heading 3</label>
+			</parameter>
+
+            <parameter name="description3" sort_order="10" visible="true" xsi:type="text">
+				<label>Description 3</label>
+			</parameter>
+             <parameter name="uiComponent" xsi:type="text" required="false" visible="true">
+                <label translate="true">UI Component</label>
+                <value>widget_recently_viewed</value>
+            </parameter>
+		</parameters>
+	</widget>
+</widgets>
+
+
+
+
+
+
+
+

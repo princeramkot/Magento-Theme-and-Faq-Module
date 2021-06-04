@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Vtn_Faqs::faqMenu" title="Faqs" module="Vtn_Faqs" sortOrder="20"   resource="Vtn_Faqs::faq"/>
+     <add id="Vtn_Faqs::faqSubMenu1" title="Manage Faqs" module="Vtn_Faqs" sortOrder="10"
+       resource="Vtn_Faqs::faqSubMenu1" parent="Vtn_Faqs::faqMenu" action="faq/faqs/faq" />
+
+       <add id="Vtn_Faqs::faqSubMenu2" title="Manage Faq Groups" module="Vtn_Faqs" sortOrder="20"
+       resource="Vtn_Faqs::faqSubMenu2" parent="Vtn_Faqs::faqMenu" action="faq/faqs/faq" />
+    </menu>
+
+</config>

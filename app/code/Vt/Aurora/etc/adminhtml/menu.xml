@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Vt_Aurora::main" title="Aurora" module="Vt_Aurora" sortOrder="10" action="frontname/controller/action" resource="Vt_Aurora::main"/>
+        <add id="Vt_Aurora::banner" title="Manage Banner" module="Vt_Aurora" sortOrder="20" resource="Vt_Aurora::banner" parent="Vt_Aurora::main" action="aurora/banner/upload/"/>
+
+    </menu>
+</config>
+

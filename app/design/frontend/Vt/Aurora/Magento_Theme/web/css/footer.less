@@ -1,0 +1,183 @@
+@footer-links-color: white;
+@primary: #ec3657;
+@link-color: #ec3657;
+@secondry: #de7282;
+@short-button: black;
+
+
+
+
+@media (min-width: 768px) {
+    .footer_logo {
+        height: 140px;
+        width: 186px;
+        background-image: url("../images/whitelogo.png");
+        background-repeat: no-repeat;
+        background-size: 170px 105px;
+        right: -1073px;
+        top: -113px;
+        position: relative;
+    }
+
+    .footer {
+
+        &.content {
+            height: 308px;
+            padding-bottom: 150px !important;
+            background: #333;
+            max-width: 100% !important;
+            padding-bottom: 150px !important;
+
+            .menu {
+                height: 225px;
+            }
+        
+        }
+
+        .copyright,
+        .bugs {
+
+            top: -90px;
+            left: 608px;
+            display: inline !important;
+            color: white;
+            position: relative;
+            margin: auto;
+
+        }
+    }
+
+
+
+    .page-footer {
+        position: relative !important;
+        z-index: 0 !important;
+        height: 244px;
+
+        top: -26px !important;
+        margin: 0 !important;
+    }
+
+   
+
+
+    ul.footer.links a {
+        // color:white;
+        font-weight: bold;
+    }
+
+
+
+
+
+}
+
+
+
+// Ribbon  in footer
+
+.divider {
+    display: flex;
+
+    &:before,
+    &:after {
+        content: "";
+        flex: 1;
+    }
+}
+
+.donotcross {
+    overflow: hidden;
+    align-items: center;
+    background: #de7282;
+    color: white;
+    height: 3em;
+    line-height: 2em;
+    top: 15px;
+    position: relative;
+    width: 100%;
+
+    &:before,
+    &:after {
+        background: #333;
+        padding: 50px 0;
+        height: 0;
+        transform: rotate(45deg);
+    }
+}
+
+.minicart-wrapper .action.showcart .counter.qty {
+    background: #ec3657;
+}
+
+
+
+//toolbar
+.modes-mode.active {
+    background-color: @secondry;
+}
+
+.modes-mode:before {
+    color: black;
+}
+
+
+
+
+//to put product's name and price  in center, on category and search pages
+.product-item-info {
+    text-align: center;
+}
+
+
+
+
+//icons
+
+.addressicon::before {
+    content: "";
+    display: inline-block;
+    background: url(../images/icons/home_white.svg);
+    background-size: 20px 18px;
+    height: 18px;
+    position: relative;
+    width: 20px;
+    left: -18px;
+}
+
+.phoneicon::before {
+    content: "";
+    display: inline-block;
+    background: url(../images/icons/phone_icon.svg);
+    background-size: 20px 18px;
+    height: 18px;
+    position: relative;
+    width: 20px;
+    left: -18px;
+}
+
+.emailicon::before {
+    content: "";
+    display: inline-block;
+    background: url(../images/icons/email_icon.svg);
+    background-size: 20px 18px;
+    height: 18px;
+    position: relative;
+    width: 20px;
+    left: -18px;
+}
+
+
+.linkicon::before {
+    content: "";
+    display: inline-block;
+    background: url(../images/icons/link_icon.svg);
+    background-size: 20px 18px;
+    height: 18px;
+    position: relative;
+    width: 20px;
+    left: -18px;
+}
+
+
+//icons

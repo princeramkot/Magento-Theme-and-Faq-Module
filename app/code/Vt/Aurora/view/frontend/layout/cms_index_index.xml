@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+
+    <body>
+        <referenceContainer name="content">
+            <block class="Vt\Aurora\Block\HomePage" name="vt_aurora_vtnslider" template="Vt_Aurora::homepage.phtml"/>
+        </referenceContainer>
+
+
+        <referenceContainer name="content">
+            <block class="Vt\Aurora\Block\HomePage" name="vt_aurora_banner" template="Vt_Aurora::banner.phtml">
+                <arguments>
+                    <argument name="view_model" xsi:type="object">Vt\Aurora\ViewModel\Greetings</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+
+
+
+    </body>
+</page>

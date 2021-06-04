@@ -1,0 +1,188 @@
+@border_color: #cababa;
+@secondary: #de7282;
+@primary: #fe3956;
+
+@images: "../images/";
+
+
+.count{
+    color:@secondary !important; //color or count in filter for ex: top(12) here 12 is count.. it appears in filter
+  }
+
+  
+a.action {
+
+    &.tocompare {
+        background-image: url("@{images}compareBlack.svg") !important;
+        background-size: contain !important;
+        color: transparent !important;
+        background-repeat: no-repeat !important;
+        border: 0 !important;
+        background-color: transparent !important;
+        height: 44px;
+        width: 60px;
+
+    }
+
+    &.towishlist {
+        background-image: url("@{images}wishlistBlack.svg") !important;
+        background-size: contain !important;
+        color: transparent !important;
+        background-repeat: no-repeat !important;
+        border: 0 !important;
+        background-color: transparent !important;
+        height: 44px;
+        width: 60px;
+    }
+}
+
+
+
+.review-control-vote label:before {
+    color: @secondary;
+}
+
+.product {
+
+    .details.product-item-details {
+        //gallary image's name and icons in center
+        width: 232px;
+    }
+
+    &-image-wrapper {
+        width: 240px;
+        height: 86px;
+    }
+
+    &-social-links,
+    .amazon-minicart-container {
+        //wishlist and comapre icon to left
+        text-align: left !important;
+    }
+
+    &-item {
+        &:nth-child(3n + 1) {
+            margin-left: 2% !important;
+        }
+
+        &-actions .actions-secondary>.action {
+            width: 25px !important;
+        }
+    }
+
+    &-info-main {
+        & .price {
+            color: @primary;
+        }
+
+        & .page-title-wrapper .page-title {
+            //title or name of product
+            margin-top: 0 !important;
+            text-transform: uppercase;
+        }
+
+    }
+}
+
+
+
+
+//fading away old wishlist and compare icons
+.abs-actions-addto-gridlist:before,
+.product-item-actions .actions-secondary>.action:before,
+.table-comparison .wishlist.split.button>.action.split:before,
+.product-items .wishlist.split.button>.action.split:before,
+.product-items .action.towishlist:before,
+.products.list.items .action.towishlist:before,
+.table-comparison .action.towishlist:before {
+
+    color: transparent !important;
+}
+
+
+//color of star rating
+.rating-summary .rating-result>span:before {
+    color: @secondary  !important;
+}
+
+
+
+.fotorama {
+
+    &__img { //setting main image border
+        border: 1px solid @border_color  !important;
+    }
+
+    &__thumb-border { //thumb image border
+        border: 1px solid @secondary;
+
+    }
+}
+
+
+span.price-label {
+    //removing 'as low as' lable
+    display: none;
+}
+
+
+
+
+
+//gallary or releated product
+
+
+.block.related {
+
+    text-align: center;
+
+}
+
+img.product-image-photo {
+    height: 200px !important;
+    width: 210px !important;
+    border: 1px solid @border_color  !important;
+}
+
+
+
+@media (min-width: 1024px),
+print {
+    .page-layout-1column .products-grid .product-item {
+        width: 17.666667% !important;
+    }
+}
+
+
+
+#block-related-heading {
+
+    position: relative;
+    left: 32px;
+
+    &::before {
+        content: "";
+        display: inline-block;
+        background: url("@{images}linedesign.png");
+        background-size: 124px 38px;
+        height: 30px;
+        position: relative;
+        width: 124px;
+    }
+
+    &::after {
+        content: "";
+        display: inline-block;
+        background: url("@{images}linedesign.png");
+        background-size: 124px 38px;
+        height: 30px;
+        position: relative;
+        width: 124px;
+    }
+}
+
+
+
+.column.main .block .title strong {
+    font-size: 28px;
+}

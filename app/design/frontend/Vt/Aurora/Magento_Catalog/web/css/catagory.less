@@ -1,0 +1,237 @@
+@card-color: #e0d5d5;
+@primary: #fe3956;
+@secondary: #de7282;
+@border_color: #cababa;
+@images: "../images/";
+
+
+
+.count{
+  color:@secondary !important; //color or count in filter for ex: top(12) here 12 is count.. it appears in filter
+}
+
+.modes-mode:before{ //list and grid button color
+  color:black !important;
+}
+
+.product-image-photo {
+  box-shadow: 0 4px 8px 0 @card-color ;
+  transition: 0.3s;
+  border-radius: 5px;
+  width: 90%;
+
+  &:hover {
+    box-shadow: 0 6px 10px 0 @card-color;
+  }
+
+
+}
+
+.product-item-name,
+.product.name a {
+  text-transform: uppercase;
+}
+
+a,
+.alink {
+  color: #de7282;
+}
+
+
+.cart_button {
+  background-image: url("@{images}shoppingCartWhite.png") !important;
+  cursor: pointer;
+  background-repeat: no-repeat;
+}
+
+
+//increased size for cart background
+.product {
+
+  &-item .tocart2 {
+    white-space: nowrap;
+    height: 26px;
+    width: 26px;
+    top: 14px;
+    position: relative;
+    background-repeat: no-repeat !important;
+    background-color: transparent !important;
+  }
+}
+
+
+.products-list .product {
+  //for list view
+
+  &-item .tocart2 {
+    top: 14px;
+
+  }
+}
+
+
+.container_overlay {
+  padding: 1em 0;
+  float: left;
+  width: 50%;
+
+}
+
+@media screen and (max-width: 640px) {
+  .container_overlay {
+    display: block;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .container_overlay {
+    width: inherit;
+  }
+}
+
+
+.content_overlay {
+  position: relative;
+  width: 90%;
+  max-width: 400px;
+  margin: auto;
+  overflow: hidden;
+
+  .content_overlay-overlay {
+    background: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    height: 99%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0;
+    -webkit-transition: all 0.4s ease-in-out 0s;
+    -moz-transition: all 0.4s ease-in-out 0s;
+    transition: all 0.4s ease-in-out 0s;
+  }
+
+  &:hover .content_overlay-overlay {
+    opacity: 1;
+  }
+
+  &:hover .content_overlay-details {
+    top: 83%;
+    left: 50%;
+    opacity: 1;
+  }
+}
+
+
+
+
+
+.products-grid .grid .content_overlay-details {
+  position: absolute;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  padding-left: 1em;
+  padding-right: 1em;
+  background: rgba(0, 0, 0, 0.7);
+  width: 80%;
+  top: 90%;
+  z-index: 1;
+  left: 50%;
+  opacity: 0;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  -moz-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+
+
+
+
+.fadeIn-bottom {
+  top: 85%;
+}
+
+
+.list .content_overlay-details {
+  position: absolute;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  padding-left: 1em;
+  padding-right: 1em;
+  background: rgba(0, 0, 0, 0.7);
+  width: 80%;
+  top: 90%;
+  z-index: 1;
+  left: 50%;
+  opacity: 0;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  -moz-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+
+
+
+
+
+
+
+//wishlist icon
+.product-items {
+
+  //compare icon
+  .tocompare:before {
+    background: url("@{images}compareWhite.png");
+    background-repeat: no-repeat;
+    color: transparent !important;
+  }
+
+  .action.towishlist:before,
+  .products.list.items .action.towishlist:before,
+  .table-comparison .action.towishlist:before {
+    background-image: url("@{images}wishlist.png") !important;
+    background-repeat: no-repeat !important;
+    color: transparent !important;
+
+  }
+}
+
+
+
+
+
+
+span.price-label {
+  //removing as low as lable
+  display: none;
+}
+
+
+
+.products-list {
+
+  .content_overlay:hover .content_overlay-details {
+    top: 80%;
+  }
+
+  .product-item-actions {
+    //list view
+    position: relative;
+    top: -79px;
+  }
+
+  .content_overlay-details {
+    top: 97%;
+    height: 50px;
+  }
+}

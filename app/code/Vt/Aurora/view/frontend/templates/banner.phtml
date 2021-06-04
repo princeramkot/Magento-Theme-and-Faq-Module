@@ -1,0 +1,9 @@
+<?php
+
+$imageUrl = "../../web/images/" . $this->getData("banner_image");
+$viewModel = $block->getViewModel();
+?>
+<!-- style="background-image:url('<?= $imageUrl; ?>')" -->
+<div class="test-shine-banner banner">
+    <button class="btn"><?=$viewModel->getShopNow()?></button>
+</div>
